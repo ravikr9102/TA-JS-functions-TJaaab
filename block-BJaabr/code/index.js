@@ -47,7 +47,7 @@ function addOne(n) {
 
 // - Write a Function Expression
 let addOne = function (n) {
-  return n - 1;
+  return n + 1;
 };
 
 // - Write an Arrow Function without curly brackets(if possible)
@@ -197,12 +197,17 @@ let isGreater = function (x,y) {
 }
 
 // - Write an Arrow Function without curly brackets(if possible)
-let isGreater = ((x,y) => x > y);
+let isGreater = (x,y) => (x > y);
 
 // - Write an Arrow Function with curly brackets
 let isGreater = (x,y) => {
-  return (x > y);
-}
+  if (x > y ) {
+    return `true`;
+  }
+  else {
+    return `false`;
+  }
+};
 // - Execute the function
 isGreater(10,20);
 
@@ -242,16 +247,28 @@ let oddOrEven = function (Number) {
   }
 }
 // - Write an named Function Expression
-
+let oddOrEven = function isOdd(Number) {
+  if (number % 2 === 0) {
+    return `even`;
+  }
+  else {
+    return `odd`;
+  }
+}
 
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
 let oddOrEven = (number) => number % 2 === 0 ? `even` : `odd`;
 
 // - Write an Arrow Function with curly brackets
 let oddOrEven = (number) => {
-  number % 2 === 0 
+  if (number % 2 === 0) {
+    return `even`;
+  }
+  else {
+    return `odd`;
+  }
+};
 
-}
 // - Execute the function
 oddOrEven (16);
 
@@ -259,4 +276,4 @@ oddOrEven (16);
 let returnValue6 = oddOrEven (16);
 
 // - What is the typeof returnValue
-// typeof returnValue6 is "String"
+// typeof returnValue6 is "Number"
