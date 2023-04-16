@@ -31,7 +31,7 @@ convertToString(21);
 let returnValue = convertToString(23);
 
 // - What is the typeof returnValue
-// typeof returnValue is "string"
+ (`typeof returnValue is ("string")`)
 
 /* 1. Add one to the given value
 
@@ -42,17 +42,37 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function addOne(number){
+  return number + 1
+}
+
 // - Write a Function Expression
+
+let addOne = function addOne(number){
+  return number + 1
+}
 
 // - Write an Arrow Function without curly brackets(if possible)
 
+let addOne = addOne = (number) => number + 1;
+
 // - Write an Arrow Function with curly brackets
+
+let addOne = addOne = (number) =>  {
+  return number + 1;
+}
 
 // - Execute the function
 
+addOne(45);
+
 // - Execute the function and store the return value in a variable.
 
+let executeValue = addOne(34)
+
 // - What is the typeof returnValue
+
+typeof(executeValue);
 
 /* 2. Subtract one
 
